@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		D17B289417439499002F4419 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D17B289317439499002F4419 /* main.cpp */; };
 		D17B289617439499002F4419 /* keyfinder.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = D17B289517439499002F4419 /* keyfinder.1 */; };
+		D17B289F1743A7F9002F4419 /* libavcodec.54.31.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D17B289C1743A7F9002F4419 /* libavcodec.54.31.0.dylib */; };
+		D17B28A01743A7F9002F4419 /* libavformat.54.19.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D17B289D1743A7F9002F4419 /* libavformat.54.19.0.dylib */; };
+		D17B28A11743A7F9002F4419 /* libavutil.52.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D17B289E1743A7F9002F4419 /* libavutil.52.0.0.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +31,9 @@
 		D17B289017439499002F4419 /* keyfinder */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = keyfinder; sourceTree = BUILT_PRODUCTS_DIR; };
 		D17B289317439499002F4419 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		D17B289517439499002F4419 /* keyfinder.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = keyfinder.1; sourceTree = "<group>"; };
+		D17B289C1743A7F9002F4419 /* libavcodec.54.31.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavcodec.54.31.0.dylib; path = ../../../../usr/local/Cellar/libav/2/lib/libavcodec.54.31.0.dylib; sourceTree = "<group>"; };
+		D17B289D1743A7F9002F4419 /* libavformat.54.19.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavformat.54.19.0.dylib; path = ../../../../usr/local/Cellar/libav/2/lib/libavformat.54.19.0.dylib; sourceTree = "<group>"; };
+		D17B289E1743A7F9002F4419 /* libavutil.52.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavutil.52.0.0.dylib; path = ../../../../usr/local/Cellar/libav/2/lib/libavutil.52.0.0.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +41,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D17B289F1743A7F9002F4419 /* libavcodec.54.31.0.dylib in Frameworks */,
+				D17B28A01743A7F9002F4419 /* libavformat.54.19.0.dylib in Frameworks */,
+				D17B28A11743A7F9002F4419 /* libavutil.52.0.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +53,9 @@
 		D17B288717439499002F4419 = {
 			isa = PBXGroup;
 			children = (
+				D17B289C1743A7F9002F4419 /* libavcodec.54.31.0.dylib */,
+				D17B289D1743A7F9002F4419 /* libavformat.54.19.0.dylib */,
+				D17B289E1743A7F9002F4419 /* libavutil.52.0.0.dylib */,
 				D17B289217439499002F4419 /* keyfinder */,
 				D17B289117439499002F4419 /* Products */,
 			);
@@ -186,6 +198,11 @@
 		D17B289A17439499002F4419 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					/usr/local/Cellar/libav/2/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -193,6 +210,11 @@
 		D17B289B17439499002F4419 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					/usr/local/Cellar/libav/2/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
