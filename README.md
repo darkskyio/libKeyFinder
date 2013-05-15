@@ -60,3 +60,13 @@ c.append(k.finalChromagramOfAudio(buffer));
 KeyFinder::KeyDetectionResult r = k.keyOfChromagram(c);
 doSomethingWithFinalKeyEstimate(r.globalKeyEstimate);
 ```
+
+Dependencies
+------------
+
+To get started with compiling this beast you will need to install libav.
+
+To do this on Mac make sure you have [Homebrew](http://mxcl.github.io/homebrew/) installed and enter these commands:
+```
+
+```
