@@ -64,11 +64,12 @@ doSomethingWithFinalKeyEstimate(r.globalKeyEstimate);
 Dependencies
 ------------
 
-To get started with compiling this beast you will need to install libav.
+To get started with compiling this beast you will need to install libav and fftw.
 
 To do this on Mac make sure you have [Homebrew](http://mxcl.github.io/homebrew/) installed and enter these commands:
 
 ``` bash
 brew update && brew upgrade
 brew install ./libav.rb
+brew install fftw
 ```

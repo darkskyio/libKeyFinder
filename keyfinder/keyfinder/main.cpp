@@ -15,6 +15,7 @@ extern "C" {
 #include <libavcodec/avcodec.h>
 #include <libavformat/avformat.h>
 }
+#include "audiodata.h"
 
 using namespace std;
 
@@ -56,16 +57,14 @@ int main(int argc, const char * argv[])
 		cout << "AV Error! " << "Could not find the stream information for the file. Exiting.\n";
 		return -1;
 	}
-	printf("FLAG: Get stream pt1.\n");
+	printf("FLAG: Get stream mid.\n");
 	int audio_stream = -1;
 	for (int i = 0; i < (int)av_fcontext->nb_streams; i++) {
-		printf("\tnext stream.\n");
 		if (av_fcontext->streams[i]->codec->codec_type == AVMEDIA_TYPE_AUDIO) {
 			audio_stream = i;
 			break;
 		}
 	}
-	printf("FLAG: Get stream pt2.\n");
 	if (audio_stream == -1) {
 		avformat_close_input(&av_fcontext);
 		cout << "AV Error! " << "Could not find an audio stream in the file. Exiting.\n";
@@ -121,6 +120,9 @@ int main(int argc, const char * argv[])
 	cout << "Decoding \"" << path << "\" (" << av_get_sample_fmt_name(av_ccontext->sample_fmt) << ", " << av_ccontext->sample_rate << ").\n";
 	
 	
+	//--------------------------------------------------------//
+	// Find the Key!
+	//--------------------------------------------------------//
 	
 	
 	

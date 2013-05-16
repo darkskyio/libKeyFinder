@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D13A8DEB17454AA500289EA4 /* audiodata.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D13A8DA217454AA500289EA4 /* audiodata.cpp */; };
+		D13A8DEC17454AA500289EA4 /* chromagram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D13A8DA517454AA500289EA4 /* chromagram.cpp */; };
+		D13A8DED17454AA500289EA4 /* chromatransform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D13A8DA717454AA500289EA4 /* chromatransform.cpp */; };
+		D13A8DEE17454AA500289EA4 /* chromatransformfactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D13A8DA917454AA500289EA4 /* chromatransformfactory.cpp */; };
+		D13A8DEF17454AA500289EA4 /* downsampler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D13A8DAC17454AA500289EA4 /* downsampler.cpp */; };
+		D13A8DF017454AA500289EA4 /* fftadapter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D13A8DAF17454AA500289EA4 /* fftadapter.cpp */; };
+		D13A8E0417454AA500289EA4 /* keyclassifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D13A8DD817454AA500289EA4 /* keyclassifier.cpp */; };
+		D13A8E0517454AA500289EA4 /* keyfinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D13A8DDA17454AA500289EA4 /* keyfinder.cpp */; };
+		D13A8E0617454AA500289EA4 /* lowpassfilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D13A8DDD17454AA500289EA4 /* lowpassfilter.cpp */; };
+		D13A8E0717454AA500289EA4 /* lowpassfilterfactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D13A8DDF17454AA500289EA4 /* lowpassfilterfactory.cpp */; };
+		D13A8E0817454AA500289EA4 /* parameters.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D13A8DE117454AA500289EA4 /* parameters.cpp */; };
+		D13A8E0917454AA500289EA4 /* segmentation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D13A8DE317454AA500289EA4 /* segmentation.cpp */; };
+		D13A8E0A17454AA500289EA4 /* spectrumanalyser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D13A8DE517454AA500289EA4 /* spectrumanalyser.cpp */; };
+		D13A8E0B17454AA500289EA4 /* toneprofiles.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D13A8DE717454AA500289EA4 /* toneprofiles.cpp */; };
+		D13A8E0C17454AA500289EA4 /* windowfunctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D13A8DE917454AA500289EA4 /* windowfunctions.cpp */; };
 		D17B289417439499002F4419 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D17B289317439499002F4419 /* main.cpp */; };
 		D17B289617439499002F4419 /* keyfinder.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = D17B289517439499002F4419 /* keyfinder.1 */; };
 		D17B289F1743A7F9002F4419 /* libavcodec.54.31.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D17B289C1743A7F9002F4419 /* libavcodec.54.31.0.dylib */; };
@@ -28,6 +43,40 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D13A8DA217454AA500289EA4 /* audiodata.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = audiodata.cpp; sourceTree = "<group>"; };
+		D13A8DA317454AA500289EA4 /* audiodata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = audiodata.h; sourceTree = "<group>"; };
+		D13A8DA417454AA500289EA4 /* binode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = binode.h; sourceTree = "<group>"; };
+		D13A8DA517454AA500289EA4 /* chromagram.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = chromagram.cpp; sourceTree = "<group>"; };
+		D13A8DA617454AA500289EA4 /* chromagram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chromagram.h; sourceTree = "<group>"; };
+		D13A8DA717454AA500289EA4 /* chromatransform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = chromatransform.cpp; sourceTree = "<group>"; };
+		D13A8DA817454AA500289EA4 /* chromatransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chromatransform.h; sourceTree = "<group>"; };
+		D13A8DA917454AA500289EA4 /* chromatransformfactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = chromatransformfactory.cpp; sourceTree = "<group>"; };
+		D13A8DAA17454AA500289EA4 /* chromatransformfactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chromatransformfactory.h; sourceTree = "<group>"; };
+		D13A8DAB17454AA500289EA4 /* constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
+		D13A8DAC17454AA500289EA4 /* downsampler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = downsampler.cpp; sourceTree = "<group>"; };
+		D13A8DAD17454AA500289EA4 /* downsampler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = downsampler.h; sourceTree = "<group>"; };
+		D13A8DAE17454AA500289EA4 /* exception.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exception.h; sourceTree = "<group>"; };
+		D13A8DAF17454AA500289EA4 /* fftadapter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fftadapter.cpp; sourceTree = "<group>"; };
+		D13A8DB017454AA500289EA4 /* fftadapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fftadapter.h; sourceTree = "<group>"; };
+		D13A8DD817454AA500289EA4 /* keyclassifier.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = keyclassifier.cpp; sourceTree = "<group>"; };
+		D13A8DD917454AA500289EA4 /* keyclassifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = keyclassifier.h; sourceTree = "<group>"; };
+		D13A8DDA17454AA500289EA4 /* keyfinder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = keyfinder.cpp; sourceTree = "<group>"; };
+		D13A8DDB17454AA500289EA4 /* keyfinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = keyfinder.h; sourceTree = "<group>"; };
+		D13A8DDC17454AA500289EA4 /* keyfinderresult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = keyfinderresult.h; sourceTree = "<group>"; };
+		D13A8DDD17454AA500289EA4 /* lowpassfilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lowpassfilter.cpp; sourceTree = "<group>"; };
+		D13A8DDE17454AA500289EA4 /* lowpassfilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lowpassfilter.h; sourceTree = "<group>"; };
+		D13A8DDF17454AA500289EA4 /* lowpassfilterfactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lowpassfilterfactory.cpp; sourceTree = "<group>"; };
+		D13A8DE017454AA500289EA4 /* lowpassfilterfactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lowpassfilterfactory.h; sourceTree = "<group>"; };
+		D13A8DE117454AA500289EA4 /* parameters.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = parameters.cpp; sourceTree = "<group>"; };
+		D13A8DE217454AA500289EA4 /* parameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = parameters.h; sourceTree = "<group>"; };
+		D13A8DE317454AA500289EA4 /* segmentation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = segmentation.cpp; sourceTree = "<group>"; };
+		D13A8DE417454AA500289EA4 /* segmentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = segmentation.h; sourceTree = "<group>"; };
+		D13A8DE517454AA500289EA4 /* spectrumanalyser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = spectrumanalyser.cpp; sourceTree = "<group>"; };
+		D13A8DE617454AA500289EA4 /* spectrumanalyser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = spectrumanalyser.h; sourceTree = "<group>"; };
+		D13A8DE717454AA500289EA4 /* toneprofiles.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = toneprofiles.cpp; sourceTree = "<group>"; };
+		D13A8DE817454AA500289EA4 /* toneprofiles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = toneprofiles.h; sourceTree = "<group>"; };
+		D13A8DE917454AA500289EA4 /* windowfunctions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = windowfunctions.cpp; sourceTree = "<group>"; };
+		D13A8DEA17454AA500289EA4 /* windowfunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = windowfunctions.h; sourceTree = "<group>"; };
 		D17B289017439499002F4419 /* keyfinder */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = keyfinder; sourceTree = BUILT_PRODUCTS_DIR; };
 		D17B289317439499002F4419 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		D17B289517439499002F4419 /* keyfinder.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = keyfinder.1; sourceTree = "<group>"; };
@@ -50,12 +99,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D13A8DA117454AA500289EA4 /* libKeyFinder */ = {
+			isa = PBXGroup;
+			children = (
+				D13A8DA217454AA500289EA4 /* audiodata.cpp */,
+				D13A8DA317454AA500289EA4 /* audiodata.h */,
+				D13A8DA417454AA500289EA4 /* binode.h */,
+				D13A8DA517454AA500289EA4 /* chromagram.cpp */,
+				D13A8DA617454AA500289EA4 /* chromagram.h */,
+				D13A8DA717454AA500289EA4 /* chromatransform.cpp */,
+				D13A8DA817454AA500289EA4 /* chromatransform.h */,
+				D13A8DA917454AA500289EA4 /* chromatransformfactory.cpp */,
+				D13A8DAA17454AA500289EA4 /* chromatransformfactory.h */,
+				D13A8DAB17454AA500289EA4 /* constants.h */,
+				D13A8DAC17454AA500289EA4 /* downsampler.cpp */,
+				D13A8DAD17454AA500289EA4 /* downsampler.h */,
+				D13A8DAE17454AA500289EA4 /* exception.h */,
+				D13A8DAF17454AA500289EA4 /* fftadapter.cpp */,
+				D13A8DB017454AA500289EA4 /* fftadapter.h */,
+				D13A8DD817454AA500289EA4 /* keyclassifier.cpp */,
+				D13A8DD917454AA500289EA4 /* keyclassifier.h */,
+				D13A8DDA17454AA500289EA4 /* keyfinder.cpp */,
+				D13A8DDB17454AA500289EA4 /* keyfinder.h */,
+				D13A8DDC17454AA500289EA4 /* keyfinderresult.h */,
+				D13A8DDD17454AA500289EA4 /* lowpassfilter.cpp */,
+				D13A8DDE17454AA500289EA4 /* lowpassfilter.h */,
+				D13A8DDF17454AA500289EA4 /* lowpassfilterfactory.cpp */,
+				D13A8DE017454AA500289EA4 /* lowpassfilterfactory.h */,
+				D13A8DE117454AA500289EA4 /* parameters.cpp */,
+				D13A8DE217454AA500289EA4 /* parameters.h */,
+				D13A8DE317454AA500289EA4 /* segmentation.cpp */,
+				D13A8DE417454AA500289EA4 /* segmentation.h */,
+				D13A8DE517454AA500289EA4 /* spectrumanalyser.cpp */,
+				D13A8DE617454AA500289EA4 /* spectrumanalyser.h */,
+				D13A8DE717454AA500289EA4 /* toneprofiles.cpp */,
+				D13A8DE817454AA500289EA4 /* toneprofiles.h */,
+				D13A8DE917454AA500289EA4 /* windowfunctions.cpp */,
+				D13A8DEA17454AA500289EA4 /* windowfunctions.h */,
+			);
+			name = libKeyFinder;
+			path = ../libKeyFinder;
+			sourceTree = "<group>";
+		};
 		D17B288717439499002F4419 = {
 			isa = PBXGroup;
 			children = (
 				D17B289C1743A7F9002F4419 /* libavcodec.54.31.0.dylib */,
 				D17B289D1743A7F9002F4419 /* libavformat.54.19.0.dylib */,
 				D17B289E1743A7F9002F4419 /* libavutil.52.0.0.dylib */,
+				D13A8DA117454AA500289EA4 /* libKeyFinder */,
 				D17B289217439499002F4419 /* keyfinder */,
 				D17B289117439499002F4419 /* Products */,
 			);
@@ -130,6 +222,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				D17B289417439499002F4419 /* main.cpp in Sources */,
+				D13A8DEB17454AA500289EA4 /* audiodata.cpp in Sources */,
+				D13A8DEC17454AA500289EA4 /* chromagram.cpp in Sources */,
+				D13A8DED17454AA500289EA4 /* chromatransform.cpp in Sources */,
+				D13A8DEE17454AA500289EA4 /* chromatransformfactory.cpp in Sources */,
+				D13A8DEF17454AA500289EA4 /* downsampler.cpp in Sources */,
+				D13A8DF017454AA500289EA4 /* fftadapter.cpp in Sources */,
+				D13A8E0417454AA500289EA4 /* keyclassifier.cpp in Sources */,
+				D13A8E0517454AA500289EA4 /* keyfinder.cpp in Sources */,
+				D13A8E0617454AA500289EA4 /* lowpassfilter.cpp in Sources */,
+				D13A8E0717454AA500289EA4 /* lowpassfilterfactory.cpp in Sources */,
+				D13A8E0817454AA500289EA4 /* parameters.cpp in Sources */,
+				D13A8E0917454AA500289EA4 /* segmentation.cpp in Sources */,
+				D13A8E0A17454AA500289EA4 /* spectrumanalyser.cpp in Sources */,
+				D13A8E0B17454AA500289EA4 /* toneprofiles.cpp in Sources */,
+				D13A8E0C17454AA500289EA4 /* windowfunctions.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +345,7 @@
 				D17B289B17439499002F4419 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
