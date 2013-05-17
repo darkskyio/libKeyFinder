@@ -22,6 +22,9 @@
 		D13A8E0A17454AA500289EA4 /* spectrumanalyser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D13A8DE517454AA500289EA4 /* spectrumanalyser.cpp */; };
 		D13A8E0B17454AA500289EA4 /* toneprofiles.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D13A8DE717454AA500289EA4 /* toneprofiles.cpp */; };
 		D13A8E0C17454AA500289EA4 /* windowfunctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D13A8DE917454AA500289EA4 /* windowfunctions.cpp */; };
+		D13A8E0E17454E5200289EA4 /* libboost_system-mt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D13A8E0D17454E5200289EA4 /* libboost_system-mt.dylib */; };
+		D13A8E1017454E7C00289EA4 /* libfftw3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D13A8E0F17454E7C00289EA4 /* libfftw3.3.dylib */; };
+		D13A8E131745503000289EA4 /* decoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D13A8E111745503000289EA4 /* decoder.cpp */; };
 		D17B289417439499002F4419 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D17B289317439499002F4419 /* main.cpp */; };
 		D17B289617439499002F4419 /* keyfinder.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = D17B289517439499002F4419 /* keyfinder.1 */; };
 		D17B289F1743A7F9002F4419 /* libavcodec.54.31.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D17B289C1743A7F9002F4419 /* libavcodec.54.31.0.dylib */; };
@@ -77,6 +80,10 @@
 		D13A8DE817454AA500289EA4 /* toneprofiles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = toneprofiles.h; sourceTree = "<group>"; };
 		D13A8DE917454AA500289EA4 /* windowfunctions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = windowfunctions.cpp; sourceTree = "<group>"; };
 		D13A8DEA17454AA500289EA4 /* windowfunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = windowfunctions.h; sourceTree = "<group>"; };
+		D13A8E0D17454E5200289EA4 /* libboost_system-mt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libboost_system-mt.dylib"; path = "../../../../usr/local/Cellar/boost/1.53.0/lib/libboost_system-mt.dylib"; sourceTree = "<group>"; };
+		D13A8E0F17454E7C00289EA4 /* libfftw3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfftw3.3.dylib; path = ../../../../usr/local/Cellar/fftw/3.3.3/lib/libfftw3.3.dylib; sourceTree = "<group>"; };
+		D13A8E111745503000289EA4 /* decoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = decoder.cpp; sourceTree = "<group>"; };
+		D13A8E121745503000289EA4 /* decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = decoder.h; sourceTree = "<group>"; };
 		D17B289017439499002F4419 /* keyfinder */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = keyfinder; sourceTree = BUILT_PRODUCTS_DIR; };
 		D17B289317439499002F4419 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		D17B289517439499002F4419 /* keyfinder.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = keyfinder.1; sourceTree = "<group>"; };
@@ -90,6 +97,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D13A8E1017454E7C00289EA4 /* libfftw3.3.dylib in Frameworks */,
+				D13A8E0E17454E5200289EA4 /* libboost_system-mt.dylib in Frameworks */,
 				D17B289F1743A7F9002F4419 /* libavcodec.54.31.0.dylib in Frameworks */,
 				D17B28A01743A7F9002F4419 /* libavformat.54.19.0.dylib in Frameworks */,
 				D17B28A11743A7F9002F4419 /* libavutil.52.0.0.dylib in Frameworks */,
@@ -144,6 +153,8 @@
 		D17B288717439499002F4419 = {
 			isa = PBXGroup;
 			children = (
+				D13A8E0F17454E7C00289EA4 /* libfftw3.3.dylib */,
+				D13A8E0D17454E5200289EA4 /* libboost_system-mt.dylib */,
 				D17B289C1743A7F9002F4419 /* libavcodec.54.31.0.dylib */,
 				D17B289D1743A7F9002F4419 /* libavformat.54.19.0.dylib */,
 				D17B289E1743A7F9002F4419 /* libavutil.52.0.0.dylib */,
@@ -166,6 +177,8 @@
 			children = (
 				D17B289317439499002F4419 /* main.cpp */,
 				D17B289517439499002F4419 /* keyfinder.1 */,
+				D13A8E111745503000289EA4 /* decoder.cpp */,
+				D13A8E121745503000289EA4 /* decoder.h */,
 			);
 			path = keyfinder;
 			sourceTree = "<group>";
@@ -237,6 +250,7 @@
 				D13A8E0A17454AA500289EA4 /* spectrumanalyser.cpp in Sources */,
 				D13A8E0B17454AA500289EA4 /* toneprofiles.cpp in Sources */,
 				D13A8E0C17454AA500289EA4 /* windowfunctions.cpp in Sources */,
+				D13A8E131745503000289EA4 /* decoder.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +323,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					/usr/local/lib,
 					/usr/local/Cellar/libav/2/lib,
+					/usr/local/Cellar/boost/1.53.0/lib,
+					/usr/local/Cellar/fftw/3.3.3/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -321,6 +337,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					/usr/local/lib,
 					/usr/local/Cellar/libav/2/lib,
+					/usr/local/Cellar/boost/1.53.0/lib,
+					/usr/local/Cellar/fftw/3.3.3/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
