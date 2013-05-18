@@ -26,6 +26,7 @@ extern "C" {
 #define DECODER_ERROR_PACKET -2;
 #define DECODER_ERROR_PACKET_RESAMPLE "libav could not resample the audio data."
 #define DECODER_ERROR_PACKET_THRESHOLD "libav audio contained too many bad packets."
+#define DECODER_ERROR_CLOSE_CODEC "libav could not close the audio codec context."
 
 class Decoder {
 	

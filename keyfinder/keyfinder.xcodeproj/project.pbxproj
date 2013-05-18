@@ -90,6 +90,7 @@
 		D17B289C1743A7F9002F4419 /* libavcodec.54.31.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavcodec.54.31.0.dylib; path = ../../../../usr/local/Cellar/libav/2/lib/libavcodec.54.31.0.dylib; sourceTree = "<group>"; };
 		D17B289D1743A7F9002F4419 /* libavformat.54.19.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavformat.54.19.0.dylib; path = ../../../../usr/local/Cellar/libav/2/lib/libavformat.54.19.0.dylib; sourceTree = "<group>"; };
 		D17B289E1743A7F9002F4419 /* libavutil.52.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavutil.52.0.0.dylib; path = ../../../../usr/local/Cellar/libav/2/lib/libavutil.52.0.0.dylib; sourceTree = "<group>"; };
+		D1D0CA03174838FD0049FB3B /* keytostring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = keytostring.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +146,7 @@
 				D13A8DE817454AA500289EA4 /* toneprofiles.h */,
 				D13A8DE917454AA500289EA4 /* windowfunctions.cpp */,
 				D13A8DEA17454AA500289EA4 /* windowfunctions.h */,
+				D1D0CA03174838FD0049FB3B /* keytostring.h */,
 			);
 			name = libKeyFinder;
 			path = ../libKeyFinder;

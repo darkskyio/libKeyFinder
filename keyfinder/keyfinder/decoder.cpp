@@ -44,6 +44,7 @@ int Decoder::decodePacket(AVCodecContext *codec, ReSampleContext *resample, AVPa
 	while(tempPacket.size > 0){
 		int dataSize = frameBufferSize;
 		int16_t* dataBuffer = (int16_t*)frameBuffer;
+		
 		int bytesConsumed = avcodec_decode_audio3(codec, dataBuffer, &dataSize, &tempPacket);
 		if(bytesConsumed < 0){ // error
 			tempPacket.size = 0;
@@ -162,7 +163,7 @@ int Decoder::decodeFile(std::string path, const int maxDuration, KeyFinder::Audi
 		return DECODER_ERROR_FILE;
 	}
 	
-	cout << "Decoding \"" << path << "\" (" << av_get_sample_fmt_name(codecCtx->sample_fmt) << ", " << codecCtx->sample_rate << ").\n";
+	cout << "Decoding \"" << path << "\" (" << av_get_sample_fmt_name(codecCtx->sample_fmt) << ", " << codecCtx->sample_rate << "Hz, " << (int)codecCtx->bit_rate << "bps).\n";
 	
 	
 	//--------------------------------------------------------//
@@ -195,14 +196,25 @@ int Decoder::decodeFile(std::string path, const int maxDuration, KeyFinder::Audi
 					}
 				}
 			} catch (KeyFinder::Exception& e) {
-				cout << "Encountered KeyFinder::Exception (" << e.what()
+				cout << "Encountered KeyFinder::Exception (" << e.what() << ") while decoding file.\n";
+				throw e;
 			}
 		}
+		av_free_packet(&packet);
 	}
 	
+	audio_resample_close(resample);
+	int codecCloseResult = avcodec_close(codecCtx);
+	if (codecCloseResult < 0) {
+		cout << "Error closing audio codec: " << codec->long_name << " (" << codecCloseResult << ")\n";
+		return DECODER_ERROR_WITH_AV(codecCloseResult);
+	}
 	
+	avformat_close_input(&formatCtx);
 	
+	audioData = audio;
 	
+	return 0;
 }
 
 
