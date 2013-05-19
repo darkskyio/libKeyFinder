@@ -25,6 +25,10 @@
 #include <iostream>
 //#include "preferences.h"
 
+extern "C" {
+#include <libavutil/opt.h>
+}
+
 class AsyncFileObject{
 public:
 	AsyncFileObject(const std::string&, int newMax/*, const Preferences&*/, int);

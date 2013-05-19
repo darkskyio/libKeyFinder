@@ -22,6 +22,8 @@
 #include "asyncfileobject.h"
 
 AsyncFileObject::AsyncFileObject(const std::string& f, int newMax/*, const Preferences& p*/, int r){
+	av_log_set_level(AV_LOG_ERROR);
+	
 	filePath = f;
 	maxSongLength = newMax;
 	//prefs = p;
