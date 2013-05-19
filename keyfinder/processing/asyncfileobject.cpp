@@ -21,8 +21,9 @@
 
 #include "asyncfileobject.h"
 
-AsyncFileObject::AsyncFileObject(const std::string& f/*, const Preferences& p*/, int r){
+AsyncFileObject::AsyncFileObject(const std::string& f, int newMax/*, const Preferences& p*/, int r){
 	filePath = f;
+	maxSongLength = newMax;
 	//prefs = p;
 	batchRow = r;
 }

@@ -27,8 +27,9 @@
 
 class AsyncFileObject{
 public:
-	AsyncFileObject(const std::string&/*, const Preferences&*/, int);
+	AsyncFileObject(const std::string&, int newMax/*, const Preferences&*/, int);
 	std::string filePath;
+	int maxSongLength;
 	//Preferences prefs;
 	int batchRow;
 };

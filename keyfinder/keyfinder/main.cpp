@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Darksky. All rights reserved.
 //
 
-#define MAX_SONG_LENGTH 60	// mins
+#define MAX_SONG_LENGTH 15	// mins
 
 #include <iostream>
 #include "keyfinder.h"
@@ -26,7 +26,7 @@ int main(int argc, const char * argv[])
 	string path;
 	path = argv[1];
 	
-	AsyncFileObject object(path, 0);
+	AsyncFileObject object(path, MAX_SONG_LENGTH, 0);
 	KeyFinderResultWrapper result = keyDetectionProcess(object);
 	if (result.errorMessage.size() > 0) {
 		std::cerr << result.errorMessage << endl;
