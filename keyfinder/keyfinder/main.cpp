@@ -9,6 +9,13 @@
 #define MAX_SONG_LENGTH 15	// mins
 
 #include <iostream>
+
+extern "C" {
+#include <libavcodec/avcodec.h>
+#include <libavformat/avformat.h>
+#include <libavutil/opt.h>
+}
+
 #include "keyfinder.h"
 #include "asyncfileobject.h"
 #include "asynckeyprocess.h"
@@ -25,6 +32,8 @@ int main(int argc, const char * argv[])
 	
 	string path;
 	path = argv[1];
+	
+	av_log_set_level(AV_LOG_ERROR);
 	
 	AsyncFileObject object(path, MAX_SONG_LENGTH, 0);
 	KeyFinderResultWrapper result = keyDetectionProcess(object);
