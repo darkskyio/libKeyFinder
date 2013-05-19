@@ -41,7 +41,7 @@ KeyFinderResultWrapper keyDetectionProcess(const AsyncFileObject& object){
 	
 	KeyFinder::AudioData audio;
 	try {
-		audio = decoder->decodeFile(object.filePath, object.prefs.getMaxDuration());
+		audio = decoder->decodeFile(object.filePath, 15/*object.prefs.getMaxDuration()*/);
 		delete decoder;
 	} catch (std::exception& e) {
 		delete decoder;
@@ -59,7 +59,7 @@ KeyFinderResultWrapper keyDetectionProcess(const AsyncFileObject& object){
 		result.fullChromagram = kf->progressiveChromagramOfAudio(audio, buffer/*, object.prefs.core*/);
 		result.oneOctaveChromagram = result.fullChromagram;
 		result.oneOctaveChromagram.reduceToOneOctave();
-		result.core = kf->keyOfChromagram(result.oneOctaveChromagram, object.prefs.core);
+		result.core = kf->keyOfChromagram(result.oneOctaveChromagram/*, object.prefs.core*/);
 	} catch (const std::exception& e) {
 		result.errorMessage = e.what();
 		return result;

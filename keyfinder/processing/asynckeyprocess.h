@@ -31,7 +31,7 @@
 #include "audiodata.h"
 #include "keyfinderresult.h"
 
-#include "preferences.h"
+//#include "preferences.h"
 #include "decoder.h"
 #include "asyncfileobject.h"
 #include "asynckeyresult.h"

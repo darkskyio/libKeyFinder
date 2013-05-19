@@ -10,9 +10,9 @@
 
 #include <iostream>
 #include "keyfinder.h"
-#include "preferences.h"
 #include "asyncfileobject.h"
 #include "asynckeyprocess.h"
+#include "keycodes.h"
 
 using namespace std;
 
@@ -26,15 +26,15 @@ int main(int argc, const char * argv[])
 	string path;
 	path = argv[1];
 	
-	Preferences prefs;
-	AsyncFileObject object(path, prefs, 0);
+	AsyncFileObject object(path, 0);
 	KeyFinderResultWrapper result = keyDetectionProcess(object);
 	if (result.errorMessage.size() > 0) {
 		std::cerr << result.errorMessage << endl;
 		return 1;
 	}
 	
-	std::cout << prefs.getKeyCode(result.core.globalKeyEstimate) << endl;
+	KeyCodes codes;
+	std::cout << codes.getKeyCode(result.core.globalKeyEstimate) << endl;
 	
     return 0;
 }

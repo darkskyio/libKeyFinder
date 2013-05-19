@@ -23,13 +23,13 @@
 #define ASYNCFILEOBJECT_H
 
 #include <iostream>
-#include "preferences.h"
+//#include "preferences.h"
 
 class AsyncFileObject{
 public:
-	AsyncFileObject(const std::string&, const Preferences&, int);
+	AsyncFileObject(const std::string&/*, const Preferences&*/, int);
 	std::string filePath;
-	Preferences prefs;
+	//Preferences prefs;
 	int batchRow;
 };
 
