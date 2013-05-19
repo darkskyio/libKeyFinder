@@ -18,33 +18,7 @@ enum key_type {
 
 class KeyToString {
 	
-	const std::vector<std::string> musical_keys = {
-		"A",	// A_MAJOR
-		"Am",	// A_MINOR
-		"Bb",	// B_FLAT_MAJOR
-		"Bbm",	// B_FLAT_MINOR
-		"B",	// B_MAJOR
-		"Bm",	// B_MINOR
-		"C",	// C_MAJOR
-		"Cm",	// C_MINOR
-		"Dbm",	// D_FLAT_MAJOR
-		"Db",	// D_FLAT_MINOR
-		"D",	// D_MAJOR
-		"Dm",	// D_MINOR
-		"Eb",	// E_FLAT_MAJOR
-		"Ebm",	// E_FLAT_MINOR
-		"E",	// E_MAJOR
-		"Em",	// E_MINOR
-		"F",	// F_MAJOR
-		"Fm",	// F_MINOR			Db
-		"Gb",	// G_FLAT_MAJOR
-		"Gbm",	// G_FLAT_MINOR
-		"G",	// G_MAJOR
-		"Gm",	// G_MINOR			Db
-		"Ab",	// A_FLAT_MAJOR
-		"Abm",	// A_FLAT_MINOR
-		"None"	// SILENCE
-	};
+	std::vector<std::string> musical_keys;
 	
 	key_type type;
 	
@@ -62,6 +36,20 @@ public:
 KeyToString::KeyToString()
 {
 	type = MUSICAL;
+	
+	musical_keys.push_back("A");	musical_keys.push_back("Am");
+	musical_keys.push_back("Bb");	musical_keys.push_back("Bbm");
+	musical_keys.push_back("B");	musical_keys.push_back("Bm");
+	musical_keys.push_back("C");	musical_keys.push_back("Cm");
+	musical_keys.push_back("Db");	musical_keys.push_back("Dbm");
+	musical_keys.push_back("D");	musical_keys.push_back("Dm");
+	musical_keys.push_back("Eb");	musical_keys.push_back("Ebm");
+	musical_keys.push_back("E");	musical_keys.push_back("Em");
+	musical_keys.push_back("F");	musical_keys.push_back("Fm");
+	musical_keys.push_back("Gb");	musical_keys.push_back("Gbm");
+	musical_keys.push_back("G");	musical_keys.push_back("Gm");
+	musical_keys.push_back("Ab");	musical_keys.push_back("Abm");
+	musical_keys.push_back("...");
 }
 KeyToString::~KeyToString() {}
 

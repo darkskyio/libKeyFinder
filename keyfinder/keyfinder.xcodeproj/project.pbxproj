@@ -24,12 +24,18 @@
 		D13A8E0C17454AA500289EA4 /* windowfunctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D13A8DE917454AA500289EA4 /* windowfunctions.cpp */; };
 		D13A8E0E17454E5200289EA4 /* libboost_system-mt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D13A8E0D17454E5200289EA4 /* libboost_system-mt.dylib */; };
 		D13A8E1017454E7C00289EA4 /* libfftw3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D13A8E0F17454E7C00289EA4 /* libfftw3.3.dylib */; };
-		D13A8E131745503000289EA4 /* decoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D13A8E111745503000289EA4 /* decoder.cpp */; };
 		D17B289417439499002F4419 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D17B289317439499002F4419 /* main.cpp */; };
 		D17B289617439499002F4419 /* keyfinder.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = D17B289517439499002F4419 /* keyfinder.1 */; };
 		D17B289F1743A7F9002F4419 /* libavcodec.54.31.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D17B289C1743A7F9002F4419 /* libavcodec.54.31.0.dylib */; };
 		D17B28A01743A7F9002F4419 /* libavformat.54.19.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D17B289D1743A7F9002F4419 /* libavformat.54.19.0.dylib */; };
 		D17B28A11743A7F9002F4419 /* libavutil.52.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D17B289E1743A7F9002F4419 /* libavutil.52.0.0.dylib */; };
+		D1D0CA13174859190049FB3B /* asyncfileobject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1D0CA06174859190049FB3B /* asyncfileobject.cpp */; };
+		D1D0CA14174859190049FB3B /* asynckeyprocess.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1D0CA08174859190049FB3B /* asynckeyprocess.cpp */; };
+		D1D0CA15174859190049FB3B /* decoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1D0CA0B174859190049FB3B /* decoder.cpp */; };
+		D1D0CA16174859190049FB3B /* decoderlibav.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1D0CA0D174859190049FB3B /* decoderlibav.cpp */; };
+		D1D0CA17174859190049FB3B /* libkeyfindersingleton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1D0CA0F174859190049FB3B /* libkeyfindersingleton.cpp */; };
+		D1D0CA18174859190049FB3B /* strings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1D0CA11174859190049FB3B /* strings.cpp */; };
+		D1D0CA1B174865BE0049FB3B /* preferences.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1D0CA19174865BE0049FB3B /* preferences.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -82,8 +88,6 @@
 		D13A8DEA17454AA500289EA4 /* windowfunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = windowfunctions.h; sourceTree = "<group>"; };
 		D13A8E0D17454E5200289EA4 /* libboost_system-mt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libboost_system-mt.dylib"; path = "../../../../usr/local/Cellar/boost/1.53.0/lib/libboost_system-mt.dylib"; sourceTree = "<group>"; };
 		D13A8E0F17454E7C00289EA4 /* libfftw3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfftw3.3.dylib; path = ../../../../usr/local/Cellar/fftw/3.3.3/lib/libfftw3.3.dylib; sourceTree = "<group>"; };
-		D13A8E111745503000289EA4 /* decoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = decoder.cpp; sourceTree = "<group>"; };
-		D13A8E121745503000289EA4 /* decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = decoder.h; sourceTree = "<group>"; };
 		D17B289017439499002F4419 /* keyfinder */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = keyfinder; sourceTree = BUILT_PRODUCTS_DIR; };
 		D17B289317439499002F4419 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		D17B289517439499002F4419 /* keyfinder.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = keyfinder.1; sourceTree = "<group>"; };
@@ -91,6 +95,21 @@
 		D17B289D1743A7F9002F4419 /* libavformat.54.19.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavformat.54.19.0.dylib; path = ../../../../usr/local/Cellar/libav/2/lib/libavformat.54.19.0.dylib; sourceTree = "<group>"; };
 		D17B289E1743A7F9002F4419 /* libavutil.52.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavutil.52.0.0.dylib; path = ../../../../usr/local/Cellar/libav/2/lib/libavutil.52.0.0.dylib; sourceTree = "<group>"; };
 		D1D0CA03174838FD0049FB3B /* keytostring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = keytostring.h; sourceTree = "<group>"; };
+		D1D0CA06174859190049FB3B /* asyncfileobject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = asyncfileobject.cpp; sourceTree = "<group>"; };
+		D1D0CA07174859190049FB3B /* asyncfileobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asyncfileobject.h; sourceTree = "<group>"; };
+		D1D0CA08174859190049FB3B /* asynckeyprocess.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = asynckeyprocess.cpp; sourceTree = "<group>"; };
+		D1D0CA09174859190049FB3B /* asynckeyprocess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asynckeyprocess.h; sourceTree = "<group>"; };
+		D1D0CA0A174859190049FB3B /* asynckeyresult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asynckeyresult.h; sourceTree = "<group>"; };
+		D1D0CA0B174859190049FB3B /* decoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = decoder.cpp; sourceTree = "<group>"; };
+		D1D0CA0C174859190049FB3B /* decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = decoder.h; sourceTree = "<group>"; };
+		D1D0CA0D174859190049FB3B /* decoderlibav.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = decoderlibav.cpp; sourceTree = "<group>"; };
+		D1D0CA0E174859190049FB3B /* decoderlibav.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = decoderlibav.h; sourceTree = "<group>"; };
+		D1D0CA0F174859190049FB3B /* libkeyfindersingleton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = libkeyfindersingleton.cpp; sourceTree = "<group>"; };
+		D1D0CA10174859190049FB3B /* libkeyfindersingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libkeyfindersingleton.h; sourceTree = "<group>"; };
+		D1D0CA11174859190049FB3B /* strings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = strings.cpp; sourceTree = "<group>"; };
+		D1D0CA12174859190049FB3B /* strings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strings.h; sourceTree = "<group>"; };
+		D1D0CA19174865BE0049FB3B /* preferences.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = preferences.cpp; sourceTree = "<group>"; };
+		D1D0CA1A174865BE0049FB3B /* preferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = preferences.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +180,7 @@
 				D17B289D1743A7F9002F4419 /* libavformat.54.19.0.dylib */,
 				D17B289E1743A7F9002F4419 /* libavutil.52.0.0.dylib */,
 				D13A8DA117454AA500289EA4 /* libKeyFinder */,
+				D1D0CA05174859190049FB3B /* processing */,
 				D17B289217439499002F4419 /* keyfinder */,
 				D17B289117439499002F4419 /* Products */,
 			);
@@ -179,10 +199,30 @@
 			children = (
 				D17B289317439499002F4419 /* main.cpp */,
 				D17B289517439499002F4419 /* keyfinder.1 */,
-				D13A8E111745503000289EA4 /* decoder.cpp */,
-				D13A8E121745503000289EA4 /* decoder.h */,
 			);
 			path = keyfinder;
+			sourceTree = "<group>";
+		};
+		D1D0CA05174859190049FB3B /* processing */ = {
+			isa = PBXGroup;
+			children = (
+				D1D0CA06174859190049FB3B /* asyncfileobject.cpp */,
+				D1D0CA07174859190049FB3B /* asyncfileobject.h */,
+				D1D0CA08174859190049FB3B /* asynckeyprocess.cpp */,
+				D1D0CA09174859190049FB3B /* asynckeyprocess.h */,
+				D1D0CA0A174859190049FB3B /* asynckeyresult.h */,
+				D1D0CA0B174859190049FB3B /* decoder.cpp */,
+				D1D0CA0C174859190049FB3B /* decoder.h */,
+				D1D0CA0D174859190049FB3B /* decoderlibav.cpp */,
+				D1D0CA0E174859190049FB3B /* decoderlibav.h */,
+				D1D0CA0F174859190049FB3B /* libkeyfindersingleton.cpp */,
+				D1D0CA10174859190049FB3B /* libkeyfindersingleton.h */,
+				D1D0CA19174865BE0049FB3B /* preferences.cpp */,
+				D1D0CA1A174865BE0049FB3B /* preferences.h */,
+				D1D0CA11174859190049FB3B /* strings.cpp */,
+				D1D0CA12174859190049FB3B /* strings.h */,
+			);
+			path = processing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,7 +292,13 @@
 				D13A8E0A17454AA500289EA4 /* spectrumanalyser.cpp in Sources */,
 				D13A8E0B17454AA500289EA4 /* toneprofiles.cpp in Sources */,
 				D13A8E0C17454AA500289EA4 /* windowfunctions.cpp in Sources */,
-				D13A8E131745503000289EA4 /* decoder.cpp in Sources */,
+				D1D0CA13174859190049FB3B /* asyncfileobject.cpp in Sources */,
+				D1D0CA14174859190049FB3B /* asynckeyprocess.cpp in Sources */,
+				D1D0CA15174859190049FB3B /* decoder.cpp in Sources */,
+				D1D0CA16174859190049FB3B /* decoderlibav.cpp in Sources */,
+				D1D0CA17174859190049FB3B /* libkeyfindersingleton.cpp in Sources */,
+				D1D0CA18174859190049FB3B /* strings.cpp in Sources */,
+				D1D0CA1B174865BE0049FB3B /* preferences.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
