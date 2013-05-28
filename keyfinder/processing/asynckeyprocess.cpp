@@ -20,6 +20,7 @@
  *************************************************************************/
 
 #include "asynckeyprocess.h"
+#include "CRAudioDecoder.h"
 
 KeyFinderResultWrapper keyDetectionProcess(const AsyncFileObject& object){
 	
@@ -40,8 +41,10 @@ KeyFinderResultWrapper keyDetectionProcess(const AsyncFileObject& object){
 	}
 	
 	KeyFinder::AudioData audio;
+	AudioDecoder::AudioDataDecoder decoderD;
 	try {
-		audio = decoder->decodeFile(object.filePath, object.maxSongLength);
+		//audio = decoder->decodeFile(object.filePath, object.maxSongLength);
+		audio = decoderD.decodeFile(object.filePath, object.maxSongLength);
 		delete decoder;
 	} catch (std::exception& e) {
 		delete decoder;

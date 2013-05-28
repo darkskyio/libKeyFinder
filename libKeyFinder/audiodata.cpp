@@ -59,7 +59,7 @@ namespace KeyFinder {
   }
 
   // get sample by absolute index
-  float AudioData::getSample(unsigned int index) const {
+  SAMPLE_TYPE AudioData::getSample(unsigned int index) const {
     if (index >= getSampleCount()) {
       std::ostringstream ss;
       ss << "Cannot get out-of-bounds sample (" << index << "/" << getSampleCount() << ")";
@@ -69,7 +69,7 @@ namespace KeyFinder {
   }
 
   // get sample by frame and channel
-  float AudioData::getSample(unsigned int frame, unsigned int channel) const {
+  SAMPLE_TYPE AudioData::getSample(unsigned int frame, unsigned int channel) const {
     if (frame >= getFrameCount()) {
       std::ostringstream ss;
       ss << "Cannot get out-of-bounds frame (" << frame << "/" << getFrameCount() << ")";
@@ -84,7 +84,7 @@ namespace KeyFinder {
   }
 
   // set sample by absolute index
-  void AudioData::setSample(unsigned int index, float value) {
+  void AudioData::setSample(unsigned int index, SAMPLE_TYPE value) {
     if (index >= getSampleCount()) {
       std::ostringstream ss;
       ss << "Cannot set out-of-bounds sample (" << index << "/" << getSampleCount() << ")";
@@ -97,7 +97,7 @@ namespace KeyFinder {
   }
 
   // set sample by frame and channel
-  void AudioData::setSample(unsigned int frame, unsigned int channel, float value) {
+  void AudioData::setSample(unsigned int frame, unsigned int channel, SAMPLE_TYPE value) {
     if (frame >= getFrameCount()) {
       std::ostringstream ss;
       ss << "Cannot set out-of-bounds frame (" << frame << "/" << getFrameCount() << ")";
@@ -143,7 +143,7 @@ namespace KeyFinder {
 
   void AudioData::reduceToMono() {
     if (channels == 1) return;
-    std::vector<float> newStream(getSampleCount() / channels);
+    std::vector<SAMPLE_TYPE> newStream(getSampleCount() / channels);
     for (unsigned int i = 0; i < getSampleCount(); i += channels) {
       for (unsigned int j = 0; j < channels; j++) {
         newStream[i/channels] += samples[i + j] / channels;
@@ -162,7 +162,7 @@ namespace KeyFinder {
     }
     unsigned int discardSampleCount = discardFrameCount * channels;
     unsigned int newSampleCount = getSampleCount() - discardSampleCount;
-    std::vector<float> newStream(newSampleCount);
+    std::vector<SAMPLE_TYPE> newStream(newSampleCount);
     for (unsigned int i = 0; i < newSampleCount; i ++) {
       newStream[i] = samples[i + discardSampleCount];
     }

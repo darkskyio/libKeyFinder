@@ -44,7 +44,7 @@ KeyFinder::AudioData LibAvDecoder::decodeFile(std::string filePath, const int ma
 	}
 	
 	if(avformat_find_stream_info(fCtx, NULL) < 0){
-		av_close_input_file(fCtx);
+		avformat_close_input(&fCtx);
 		printf("Could not find stream information for file %s\n", filePathCh);
 		throw KeyFinder::Exception(libavCouldNotFindStreamInformation().c_str());
 	}
@@ -56,17 +56,17 @@ KeyFinder::AudioData LibAvDecoder::decodeFile(std::string filePath, const int ma
 		}
 	}
 	if(audioStream == -1){
-		av_close_input_file(fCtx);
+		avformat_close_input(&fCtx);
 		printf("Could not find an audio stream for file %s\n", filePathCh);
 		throw KeyFinder::Exception(libavCouldNotFindAudioStream().c_str());
 	}
 	
 	// Determine duration
-	int durationSeconds = fCtx->duration / AV_TIME_BASE;
+	int durationSeconds = (int)fCtx->duration / AV_TIME_BASE;
 	int durationMinutes = durationSeconds / 60;
 	// First condition is a hack for bizarre overestimation of some MP3s
 	if(durationMinutes < 720 && durationSeconds > maxDuration * 60){
-		av_close_input_file(fCtx);
+		avformat_close_input(&fCtx);
 		printf("Duration of file %s (%d:%d) exceeds specified maximum (%d:00)\n", filePathCh, durationMinutes, durationSeconds % 60, maxDuration);
 		throw KeyFinder::Exception(durationExceedsPreference(durationMinutes, durationSeconds % 60, maxDuration).c_str());
 	}
@@ -75,7 +75,7 @@ KeyFinder::AudioData LibAvDecoder::decodeFile(std::string filePath, const int ma
 	cCtx = fCtx->streams[audioStream]->codec;
 	codec = avcodec_find_decoder(cCtx->codec_id);
 	if(codec == NULL){
-		av_close_input_file(fCtx);
+		avformat_close_input(&fCtx);
 		printf("Audio stream has unsupported codec in file %s\n", filePathCh);
 		throw KeyFinder::Exception(libavUnsupportedCodec().c_str());
 	}
@@ -83,7 +83,7 @@ KeyFinder::AudioData LibAvDecoder::decodeFile(std::string filePath, const int ma
 	// Open codec
 	int codecOpenResult = avcodec_open2(cCtx, codec, &dict);
 	if(codecOpenResult < 0){
-		av_close_input_file(fCtx);
+		avformat_close_input(&fCtx);
 		printf("Could not open audio codec %s (%d) for file %s\n", codec->long_name, codecOpenResult, filePathCh);
 		throw KeyFinder::Exception(libavCouldNotOpenCodec(codec->long_name, codecOpenResult).c_str());
 	}
@@ -95,7 +95,7 @@ KeyFinder::AudioData LibAvDecoder::decodeFile(std::string filePath, const int ma
 													0, 0, 0, 0);
 	if(rsCtx == NULL){
 		avcodec_close(cCtx);
-		av_close_input_file(fCtx);
+		avformat_close_input(&fCtx);
 		printf("Could not create ReSampleContext for file %s\n", filePathCh);
 		throw KeyFinder::Exception(libavCouldNotCreateResampleContext().c_str());
 	}
@@ -124,7 +124,7 @@ KeyFinder::AudioData LibAvDecoder::decodeFile(std::string filePath, const int ma
 						badPacketCount++;
 					}else{
 						avcodec_close(cCtx);
-						av_close_input_file(fCtx);
+						avformat_close_input(&fCtx);
 						printf("Too many bad packets (%d) while decoding file %s\n", badPacketCount, filePathCh);
 						throw KeyFinder::Exception(libavTooManyBadPackets(badPacketThreshold).c_str());
 					}
@@ -145,7 +145,7 @@ KeyFinder::AudioData LibAvDecoder::decodeFile(std::string filePath, const int ma
 	}
 	//codecMutexLocker.unlock();
 	
-	av_close_input_file(fCtx);
+	avformat_close_input(&fCtx);
 	return audio;
 }
 

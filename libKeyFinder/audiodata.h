@@ -26,6 +26,8 @@
 #include <vector>
 #include "exception.h"
 
+#define SAMPLE_TYPE uint16_t
+
 namespace KeyFinder {
 
   class AudioData {
@@ -34,15 +36,15 @@ namespace KeyFinder {
 
     unsigned int getChannels() const;
     unsigned int getFrameRate() const;
-    float getSample(unsigned int index) const;
-    float getSample(unsigned int frame, unsigned int channel) const;
+    SAMPLE_TYPE getSample(unsigned int index) const;
+    SAMPLE_TYPE getSample(unsigned int frame, unsigned int channel) const;
     unsigned int getSampleCount() const;
     unsigned int getFrameCount() const;
 
     void setChannels(unsigned int newChannels);
     void setFrameRate(unsigned int newFrameRate);
-    void setSample(unsigned int index, float value);
-    void setSample(unsigned int frame, unsigned int channels, float value);
+    void setSample(unsigned int index, SAMPLE_TYPE value);
+    void setSample(unsigned int frame, unsigned int channels, SAMPLE_TYPE value);
     void addToSampleCount(unsigned int newSamples);
     void addToFrameCount(unsigned int newFrames);
 
@@ -51,7 +53,7 @@ namespace KeyFinder {
     void reduceToMono();
 
   private:
-    std::vector<float> samples;
+    std::vector<SAMPLE_TYPE> samples;
     unsigned int channels;
     unsigned int frameRate;
   };
