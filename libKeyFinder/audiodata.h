@@ -26,7 +26,7 @@
 #include <vector>
 #include "exception.h"
 
-#define SAMPLE_TYPE uint16_t
+#define SAMPLE_TYPE int16_t
 
 namespace KeyFinder {
 
